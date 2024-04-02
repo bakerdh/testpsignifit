@@ -6,6 +6,7 @@ RUN apt-get update -qq
 #RUN apt-get -y install libxml2-dev
 #RUN apt-get -y install ghostscript
 #RUN apt-get -y install libxt-dev
+RUN apt-get -y install libssl-dev
 RUN apt-get -y install git
 RUN apt-get -y install -y python3
 RUN apt-get -y install python3-pip
