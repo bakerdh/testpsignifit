@@ -11,6 +11,7 @@ library(reticulate)
 
 # use_miniconda('r-reticulate')
 # install_python(version='3.9.1')
+use_python("/usr/bin/python3.9")
 
 py_install('https://github.com/wichmann-lab/python-psignifit/zipball/master')
 
