@@ -11,9 +11,9 @@ library(reticulate)
 
 # use_miniconda('r-reticulate')
 install_python(version='3.9.1')
-use_python_version("3.9.1")
+# use_python_version("3.9.1")
 
-# virtualenv_create('pfitenv',version="3.9:latest")
+virtualenv_create('pfitenv',version="3.9.1")
 
 py_install('https://github.com/wichmann-lab/python-psignifit/zipball/master')
 
@@ -37,6 +37,6 @@ C = ps.utils.my_norminv(1-0.05,0,1) - ps.utils.my_norminv(0.05,0,1)
 
 ```
 
-`r C`
+C = `r C`
 
 This indicates it is working.
