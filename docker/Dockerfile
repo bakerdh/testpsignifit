@@ -9,7 +9,7 @@ RUN apt-get update -qq
 RUN apt-get -y install git
 #RUN apt-get -y install -y python3.9
 #RUN apt-get -y install python3-pip
-#RUN apt-get -y install python3-venv
+RUN apt-get -y install python3-venv
 
 RUN install2.r –error \
 --deps TRUE \
