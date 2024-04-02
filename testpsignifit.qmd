@@ -1,0 +1,38 @@
+---
+title: "testpsignifit"
+format: pdf
+---
+
+This is designed to test running of psignifit in a docker container on github.
+
+```{r}
+
+library(reticulate)
+
+use_miniconda('r-reticulate')
+
+# py_install('https://github.com/wichmann-lab/python-psignifit/zipball/master')
+
+```
+
+
+```{python}
+
+# pip install https://github.com/wichmann-lab/python-psignifit/zipball/master
+
+import psignifit as ps
+
+C = ps.utils.my_norminv(1-0.05,0,1) - ps.utils.my_norminv(0.05,0,1)
+
+```
+
+```{r}
+
+  ps <- import('psignifit')
+  C <- ps$utils$my_norminv(1-0.05,0,1) - ps$utils$my_norminv(0.05,0,1)
+
+```
+
+`r C`
+
+This indicates it is working.
