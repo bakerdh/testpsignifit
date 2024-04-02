@@ -10,10 +10,10 @@ This is designed to test running of psignifit in a docker container on github.
 library(reticulate)
 
 # use_miniconda('r-reticulate')
-install_python(version='3.7.1')
+install_python(version='3.6')
 # use_python_version("3.9.1")
 
-virtualenv_create('pfitenv',version="3.7.1")
+virtualenv_create('pfitenv',version="3.6")
 
 py_install('https://github.com/wichmann-lab/python-psignifit/zipball/master')
 
