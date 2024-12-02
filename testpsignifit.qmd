@@ -20,6 +20,12 @@ py_install('psignifit',pip=TRUE)
 
 ```
 
+```{r}
+
+  ps <- import('psignifit')
+  C <- ps$utils$my_norminv(1-0.05,0,1) - ps$utils$my_norminv(0.05,0,1)
+
+```
 
 ```{python}
 
@@ -27,7 +33,7 @@ py_install('psignifit',pip=TRUE)
 
 import psignifit as ps
 
-C = ps.utils.my_norminv(1-0.05,0,1) - ps.utils.my_norminv(0.05,0,1)
+# C = ps.utils.my_norminv(1-0.05,0,1) - ps.utils.my_norminv(0.05,0,1)
 
 #        levels, n-correct,   n-total
 data = [[0.0010,   45.0000,   90.0000],
@@ -49,12 +55,6 @@ print(result.get_parameters_estimate())
 
 ```
 
-```{r}
-
-  ps <- import('psignifit')
-  C <- ps$utils$my_norminv(1-0.05,0,1) - ps$utils$my_norminv(0.05,0,1)
-
-```
 
 C = `r C`
 
