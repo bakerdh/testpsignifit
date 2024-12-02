@@ -1,4 +1,4 @@
-FROM rocker/verse:4.3.3
+FROM rocker/verse:4.4.2
 
 RUN apt-get update -qq
 #RUN apt-get -y install cmake
@@ -8,9 +8,10 @@ RUN apt-get update -qq
 #RUN apt-get -y install libxt-dev
 RUN apt-get -y install libssl-dev
 RUN apt-get -y install git
-RUN apt-get -y install -y python3
-RUN apt-get -y install python3-pip
-RUN apt-get -y install python3-venv
+#RUN apt-get -y install -y python3
+#RUN apt-get -y install python3-pip
+#RUN apt-get -y install python3-venv
+RUN actions/setup-python@v5
 
 RUN install2.r –error \
 --deps TRUE \
