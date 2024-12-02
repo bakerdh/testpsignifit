@@ -10,7 +10,7 @@ This is designed to test running of psignifit in a docker container on github.
 library(reticulate)
 
 # use_miniconda('r-reticulate')
-#install_python(version='3.12')
+install_python(version='3.6.8')
 # use_python_version("3.9.1")
 
 virtualenv_create('pfitenv',version="3.6.8")
