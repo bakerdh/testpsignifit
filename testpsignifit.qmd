@@ -20,12 +20,12 @@ py_install('psignifit',pip=TRUE)
 
 ```
 
-```{r testr}
-
-  ps <- import('psignifit')
-  C <- ps$utils$my_norminv(1-0.05,0,1) - ps$utils$my_norminv(0.05,0,1)
-
-```
+# ```{r testr}
+# 
+#   ps <- import('psignifit')
+#   C <- ps$utils$my_norminv(1-0.05,0,1) - ps$utils$my_norminv(0.05,0,1)
+# 
+# ```
 
 ```{python testpy}
 
@@ -50,12 +50,12 @@ data = [[0.0010,   45.0000,   90.0000],
         [0.0080,   90.0000,   90.0000],
         [0.0100,   90.0000,   90.0000]]
 
-# result = ps.psignifit(data, experiment_type='2AFC')
-# print(result.get_parameters_estimate())
+result = ps.psignifit(data, experiment_type='2AFC')
+print(result.get_parameters_estimate())
 
 ```
 
 
-C = `r C`
+<!-- C = `r C` -->
 
 This indicates it is working.
