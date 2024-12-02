@@ -54,8 +54,8 @@ data = [[0.0010,   45.0000,   90.0000],
 # result = ps.psignifit(data, experiment_type='2AFC')
 # print(result['Fit'][0])
 
-options = {'expType': '2AFC'}      
-result = ps.psignifit(data, options);
+# options = {'expType': '2AFC'}      
+result = ps.psignifit(data, experiment_type='2AFC');
 print(result.parameter_estimate['threshold'])
 
 ```
