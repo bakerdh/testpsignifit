@@ -12,10 +12,13 @@ RUN apt-get -y install -y python3
 RUN apt-get -y install python3-pip
 RUN apt-get -y install python3-venv
 
+RUN pip3 install psignifit --target /usr/lib/python3.10
+
+
 RUN install2.r –error \
 --deps TRUE \
 rmarkdown \
 reticulate \
 knitr
 
-#RUN R 'reticulate::use_python("/usr/bin/python3.9")'
+RUN R 'reticulate::use_python("/usr/bin/python3.10")'

@@ -13,10 +13,11 @@ library(reticulate)
 # install_python(version='3.12')
 # use_python_version("3.9.1")
 
-virtualenv_create('pfitenv',version="3.12")
+# virtualenv_create('pfitenv',version="3.12")
+use_python("/usr/bin/python3.10")
 
 # py_install('https://github.com/wichmann-lab/python-psignifit/zipball/master')
-py_install('psignifit',pip=TRUE)
+# py_install('psignifit',pip=TRUE)
 
 ```
 
@@ -50,8 +51,12 @@ data = [[0.0010,   45.0000,   90.0000],
         [0.0080,   90.0000,   90.0000],
         [0.0100,   90.0000,   90.0000]]
 
-result = ps.psignifit(data, experiment_type='2AFC')
-print(result['Fit'][0])
+# result = ps.psignifit(data, experiment_type='2AFC')
+# print(result['Fit'][0])
+
+options = {'sigmoidName': 'norm', 'expType': '2AFC'}      
+result = ps.psignifit(data, options);
+print(result.parameter_estimate['threshold'])
 
 ```
 
