@@ -11,7 +11,6 @@ RUN apt-get -y install git
 #RUN apt-get -y install -y python3
 #RUN apt-get -y install python3-pip
 #RUN apt-get -y install python3-venv
-RUN actions/setup-python@v5
 
 RUN install2.r –error \
 --deps TRUE \
