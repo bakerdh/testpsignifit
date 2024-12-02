@@ -51,7 +51,7 @@ data = [[0.0010,   45.0000,   90.0000],
         [0.0100,   90.0000,   90.0000]]
 
 result = ps.psignifit(data, experiment_type='2AFC')
-print(result.get_parameters_estimate())
+print(result['Fit'][0])
 
 ```
 
